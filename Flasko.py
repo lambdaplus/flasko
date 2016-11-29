@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 import os
-from flask.ext.script import Manager, Shell
+from flask_script import Manager, Shell
 from flask import Flask, render_template, url_for, flash, redirect, abort, request, session
-from flask.ext.bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 # from flask.ext.nav import Nav
-from flask.ext.wtf import Form
+from flask_wtf import Form
 from wtforms import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import Email, DataRequired, EqualTo, Length
-from flask.ext.login import LoginManager, login_user,login_required, logout_user, UserMixin, current_user
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.migrate import Migrate, MigrateCommand
+from flask_login import LoginManager, login_user,login_required, logout_user, UserMixin, current_user
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate, MigrateCommand
 from werkzeug.security import generate_password_hash, check_password_hash
 
 basedir = os.path.abspath(os.path.dirname(__file__))
